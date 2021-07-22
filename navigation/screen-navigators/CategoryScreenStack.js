@@ -1,14 +1,15 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import CategoryScreen from '../../screens/CategoryScreen';
+import CustomStackNavigator from '../../components/CustomStackNavigator';
 
 const Stack = createStackNavigator()
 
-const CategoryScreenStack = () => {
+const CategoryScreenStack = ({navigation}) => {
     return (
-        <Stack.Navigator>
+        <CustomStackNavigator navigation={navigation}>
             <Stack.Screen name='Category' component={CategoryScreen} />
-        </Stack.Navigator>
+        </CustomStackNavigator>
     )
 }
 

@@ -1,14 +1,15 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import CartScreen from '../../screens/CartScreen';
+import CustomStackNavigator from '../../components/CustomStackNavigator';
 
 const Stack = createStackNavigator()
 
-const CartScreenStack = () => {
+const CartScreenStack = ({navigation}) => {
     return (
-        <Stack.Navigator>
+        <CustomStackNavigator navigation={navigation} >
             <Stack.Screen name='My Cart' component={CartScreen} />
-        </Stack.Navigator>
+        </CustomStackNavigator>
     )
 }
 

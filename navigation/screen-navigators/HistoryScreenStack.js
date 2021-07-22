@@ -1,14 +1,15 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import HistoryScreen from '../../screens/HistoryScreen';
+import CustomStackNavigator from '../../components/CustomStackNavigator';
 
 const Stack = createStackNavigator()
 
-const HistoryScreenStack = () => {
+const HistoryScreenStack = ({navigation}) => {
     return (
-        <Stack.Navigator>
+        <CustomStackNavigator navigation={navigation}>
             <Stack.Screen name='History' component={HistoryScreen} />
-        </Stack.Navigator>
+        </CustomStackNavigator>
     )
 }
 
